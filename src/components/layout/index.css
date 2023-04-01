@@ -1,0 +1,17 @@
+.header{
+    background-color: #783f04;
+    width: 100%;
+    height: 60px;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container{
+    background-color: #ff9900;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    border: solid 5px black;
+}
