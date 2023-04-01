@@ -12,6 +12,7 @@ const Register = () => {
     email: "",
     password: "",
   });
+  const[sendData, setSendData] = useState(null)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,6 +21,10 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(registerUser(formData));
+    if(!error){
+      setSendData('user succesfully created')
+    }
+    
   };
 
   return (
@@ -55,6 +60,7 @@ const Register = () => {
           value={formData.password}
           onChange={handleChange}
         />
+        <b>{sendData}</b>
         <button type="submit">Register</button>
       </form>
     </div>

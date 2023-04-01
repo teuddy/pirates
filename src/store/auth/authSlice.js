@@ -32,7 +32,7 @@ export const { loginSuccess, logout, setError } = authSlice.actions;
 
 export const registerUser = (userData) => async (dispatch) => {
   try {
-    const response = await axios.post("/api/register", userData);
+    const response = await axios.post("/auth/register", userData);
     console.log(response.data);
   } catch (error) {
     dispatch(setError(error.response.data.error));
